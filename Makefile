@@ -1,14 +1,15 @@
 SHELL     = /bin/sh
 MAKEFILE  = Makefile
-#-------------------------------------------------------------
+
 CC       = gcc
 DEFS     =
 INCDIRS  = -Isrc
 LIBS     =
 OPT      = -g
 CCFLAGS  = $(DEFS) $(OPT)
-TARGET   = build/bus_generator
 
+TARGET    = build/bus_generator
+OBJECTDIR = build/obj
 SRC	=\
     main.c\
     arg_parser.c\
@@ -23,23 +24,21 @@ SRC	=\
 
 OBJS = $(SRC:.c=.o)
 
-#-------------------------------------------------------------
 H_DIR = src
 C_DIR = src
 
 vpath %.h $(H_DIR)
 vpath %.c $(C_DIR)
 
-#-------------------------------------------------------------
-OBJECTDIR = obj
-DUMMY := $(shell [ -d $(OBJECTDIR) ] || mkdir $(OBJECTDIR) )
 
-#-------------------------------------------------------------
 $(OBJECTDIR)/%.o: %.c
 	$(CC) -c $(CCFLAGS) $(INCDIRS) -o $@ $<
 
-#-------------------------------------------------------------
-all: $(TARGET)
+prev-build:
+	@mkdir -p build
+	@mkdir -p build/obj
+
+all: prev-build $(TARGET)
 
 $(TARGET): $(addprefix $(OBJECTDIR)/, $(OBJS))
 	$(CC) -o $(TARGET) $^ $(LIBS)
@@ -47,7 +46,7 @@ $(TARGET): $(addprefix $(OBJECTDIR)/, $(OBJS))
 run: $(TARGET)
 	./$(TARGET) --master=2 --slave=3 --output=amba_axi_m2s3.v
 
-#-------------------------------------------------------------
+
 DIRS = $(subst /,, $(dir $(wildcard */Makefile)))
 
 clean:
