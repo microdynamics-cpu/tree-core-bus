@@ -1,6 +1,3 @@
-SHELL     = /bin/sh
-MAKEFILE  = Makefile
-
 CC       = gcc
 DEFS     =
 INCDIRS  = -Isrc
@@ -8,9 +5,10 @@ LIBS     =
 OPT      = -g
 CCFLAGS  = $(DEFS) $(OPT)
 
-TARGET    = build/bus_generator
-OBJECTDIR = build/obj
-SRC	=\
+BUILD_DIR = build
+TARGET    = $(BUILD_DIR)/bus_generator
+OBJ_DIR = $(BUILD_DIR)/obj
+SRC =\
     main.c\
     arg_parser.c\
     gen_axi_amba.c\
@@ -31,7 +29,7 @@ vpath %.h $(H_DIR)
 vpath %.c $(C_DIR)
 
 
-$(OBJECTDIR)/%.o: %.c
+$(OBJ_DIR)/%.o: %.c
 	$(CC) -c $(CCFLAGS) $(INCDIRS) -o $@ $<
 
 prev-build:
@@ -40,7 +38,7 @@ prev-build:
 
 all: prev-build $(TARGET)
 
-$(TARGET): $(addprefix $(OBJECTDIR)/, $(OBJS))
+$(TARGET): $(addprefix $(OBJ_DIR)/, $(OBJS))
 	$(CC) -o $(TARGET) $^ $(LIBS)
 
 run: $(TARGET)
@@ -50,8 +48,7 @@ run: $(TARGET)
 DIRS = $(subst /,, $(dir $(wildcard */Makefile)))
 
 clean:
-	-rm -rf $(OBJECTDIR)
-	-rm -rf ./Debug
-	-rm -f *.stackdump
-	-rm -f compile.log
-	-rm -f *.v
+	rm -rf $(BUILD_DIR)
+
+.PHONY:
+	prev-build all run clean
