@@ -42,7 +42,7 @@ $(TARGET): $(addprefix $(OBJ_DIR)/, $(OBJS))
 	$(CC) -o $(TARGET) $^ $(LIBS)
 
 run: $(TARGET)
-	./$(TARGET) --master=2 --slave=3 --output=amba_axi_m2s3.v
+	./$(TARGET) --master=2 --slave=3 --output=test/amba_axi_m2s3.v
 
 
 DIRS = $(subst /,, $(dir $(wildcard */Makefile)))
