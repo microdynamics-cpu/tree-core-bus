@@ -1,16 +1,6 @@
 #ifndef GEN_AXI_UTILS_H
 #define GEN_AXI_UTILS_H
-//--------------------------------------------------------
-// Copyright (c) 2016 by Ando Ki.
-// All right reserved.
-//
-// adki@future-ds.com
-// andoki@gmail.com
-//--------------------------------------------------------
-// VERSION: 2016.03.26.
-//--------------------------------------------------------
-// AMBA AXI utils
-//--------------------------------------------------------
+
 
 extern int gen_axi_mport   ( char* prefix    // prefix M_, M0_, M1_, ..
                            , char* otype     // output type (wire or reg)
@@ -74,9 +64,4 @@ extern int gen_axi_s2m_mcon_r( char* prefixA, char* prefixB, FILE* fo );
 extern int gen_axi_s2m_scon_b( char* prefixA, char* prefixB, char* postfix, FILE* fo );
 extern int gen_axi_s2m_scon_r( char* prefixA, char* prefixB, char* postfix, FILE* fo );
 
-//--------------------------------------------------------
-// Revision history:
-//
-// 2016.03.26: Started by Ando Ki.
-//--------------------------------------------------------
 #endif

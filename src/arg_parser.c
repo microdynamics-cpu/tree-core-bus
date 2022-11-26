@@ -1,13 +1,3 @@
-//--------------------------------------------------------
-// Copyright (c) 2018-2021 by Ando Ki (adki@future-ds.com / andoki@gmail.com)
-// The contents and codes along with it are prepared
-// in the hope that it will be useful to understand
-// Ando Ki's work, but WITHOUT ANY WARRANTY.
-// The design is not guaranteed to work on all systems.
-// While there are no known issues with using the design,
-// no technical support will be provided for problems
-// that might arise.
-//--------------------------------------------------------
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -144,15 +134,3 @@ void print_version(void)
 {
      printf("%X\n", version);
 }
-
-//--------------------------------------------------------
-// Revision history
-//
-// 2021.07.10: option changed, '--version/-v' added.
-// 2021.06.01: '--axi3' added by Ando Ki.
-// 2018.07.19: '--lic' added by Ando Ki.
-// 2017.09.03: '--ver' added by Ando Ki.
-//             '-m' to '-d' to keep consistency
-// 2017.04.08: Updated by Ando Ki.
-// 2016.03.26: Startd by Ando Ki.
-//--------------------------------------------------------

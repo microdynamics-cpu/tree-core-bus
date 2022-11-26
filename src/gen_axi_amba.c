@@ -1,14 +1,3 @@
-//--------------------------------------------------------
-// Copyright (c) 2018-2019-2021 by Ando Ki.
-// All right reserved.
-//
-// adki@future-ds.com
-// andoki@gmail.com
-//--------------------------------------------------------
-// VERSION: 2021.06.01.
-//--------------------------------------------------------
-// Generate AMBA AXI
-//--------------------------------------------------------
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -463,17 +452,3 @@ fprintf(fo, "endmodule\n");
 
     return 0;
 }
-
-//--------------------------------------------------------
-// Revision history:
-//
-// 2021.06.01: 'axi4' arguemnt for 'gen_axi_amba()' added.
-// 2021.06.01: Channel id (M?_MID) is implemented internally after removing from module port.
-// 2021.06.01: static C function 'logb2()' added.
-// 2021.06.01: Verilog function 'clogb2()' added.
-// 2021.06.01: define AMBA_QOS to use QOS port. (but not implemented it functionality)
-// 2019.11.27: 'ERROR slave x starting address should be a multiple of size.");' added
-// 2018.09.20: 'WIDTH_??USER' with 'ifdef
-// 2017.09.19: fprintf(fo, "     %saxi_stom_s%d #(.MASTER_ID(%d)\n", prefix, numS, i);
-// 2016.03.26: Started by Ando Ki.
-//--------------------------------------------------------

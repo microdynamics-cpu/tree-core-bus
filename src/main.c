@@ -1,13 +1,3 @@
-//--------------------------------------------------------
-// Copyright (c) 2016-2021 by Ando Ki (andoki@gmail.com)
-// The contents and codes along with it are prepared
-// in the hope that it will be useful to understand 
-// Ando Ki's work, but WITHOUT ANY WARRANTY.
-// The design is not guaranteed to work on all systems.
-// While there are no known issues with using the design,
-// no technical support will be provided for problems
-// that might arise.
-//--------------------------------------------------------
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -64,9 +54,3 @@ void sig_handle(int sig) {
        break;
   }
 }
-//--------------------------------------------------------
-// Revision history
-//
-// 2018.07.19: Minor modification by Ando Ki.
-// 2016.03.26: Startd by Ando Ki.
-//--------------------------------------------------------
