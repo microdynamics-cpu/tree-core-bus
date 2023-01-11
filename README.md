@@ -3,9 +3,7 @@
     <h2 align="center">TreeCore Bus: A General Bus Generator which supporting AMBA, Wishbone, TileLink and ChipLink</h2>
 </p>
 <p align="center">
-    <a href="https://github.com/microdynamics-cpu/tree-core-bus/actions">
-      <img src="https://img.shields.io/github/workflow/status/microdynamics-cpu/tree-core-bus/unit-test/main?label=unit-test&logo=github&style=flat-square">
-    </a>
+    <img src="https://img.shields.io/github/actions/workflow/status/microdynamics-cpu/tree-core-bus/unit-test.yml?branch=main&logo=github&style=flat-square">
     <a href="./LICENSE">
       <img src="https://img.shields.io/github/license/microdynamics-cpu/tree-core-bus?color=brightgreen&logo=github&style=flat-square">
     </a>
