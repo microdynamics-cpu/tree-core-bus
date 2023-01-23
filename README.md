@@ -1,5 +1,4 @@
 <p align="center">
-    <!-- <img width="200px" src="./.images/tree_core_logo.svg" align="center" alt="Tree Core CPU" /> -->
     <h2 align="center">TreeCore Bus: A General Bus Generator which supporting AMBA, Wishbone, TileLink and ChipLink</h2>
 </p>
 <p align="center">
@@ -34,6 +33,5 @@
 All of the TreeCore Bus codes are release under the [GPL-3.0 License](LICENSE).
 
 ## Acknowledgement
-1. [icesugar](https://github.com/wuxx/icesugar)
 
 ## Reference
