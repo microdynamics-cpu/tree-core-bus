@@ -26,7 +26,6 @@
 ## Motivation
 ## Feature
 ## Usage
-
 ## License
 All of the TreeCore Bus codes are release under the [GPL-3.0 License](LICENSE).
 
